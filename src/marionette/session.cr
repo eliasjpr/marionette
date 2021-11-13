@@ -21,11 +21,6 @@ module Marionette
                    @capabilities : Hash(String, JSON::Any),
                    @service = nil,
                    @w3c = false)
-      at_exit do
-        if (svc = @service) && !svc.closed?
-          stop
-        end
-      end
     end
 
     # Start a new Session using the given `driver` and `type`. You can pass in any
